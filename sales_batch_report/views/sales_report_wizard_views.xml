@@ -69,6 +69,8 @@
                             string="Print PDF"
                             type="object"
                             class="btn-primary"/>
+                            this is very good thing to use  
+                            this is very good thing to use  
 
                     <button string="Cancel"
                             special="cancel"
