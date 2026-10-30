@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <template id="sales_batch_report_template">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="wizard">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <h2>Sales Batch Report</h2>
+
+                        <p>
+                            <strong>Product:</strong>
+                            <span t-if="wizard.product_id">
+                                <t t-esc="wizard.product_id.display_name"/>
+                            </span>
+                            <span t-else="">
+                                All Products
+                            </span>
+                        </p>
+
+                        <table class="table table-sm table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Product Variant Value</th>
+                                    <th>Customer</th>
+                                    <th>Order Date</th>
+                                    <th>Qty</th>
+                                    <th>Sale Rate</th>
+                                    <th>Lot &amp; Serial Number</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <t t-foreach="lines" t-as="line">
+
+                                    <tr>
+                                        <td>
+                                            <t t-esc="line['product']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['variant']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['customer']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['order_date']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['qty']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['sale_rate']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="line['lot']"/>
+                                        </td>
+                                    </tr>
+
+                                </t>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

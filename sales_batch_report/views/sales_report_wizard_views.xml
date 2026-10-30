@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_sales_batch_report_wizard_form" model="ir.ui.view">
+        <field name="name">sales.batch.report.wizard.form</field>
+        <field name="model">sales.batch.report.wizard</field>
+        <field name="arch" type="xml">
+
+            <form string="Sales Batch Report">
+
+                <sheet>
+
+                    <!-- Product and Variant -->
+                    <group>
+                        <group>
+                            <field name="product_id"/>
+                        </group>
+
+                        <group>
+                            <field name="variant_ids"
+                                   widget="many2many_tags"
+                                   domain="[('product_tmpl_id', '=', product_id)]"/>
+                        </group>
+                    </group>
+
+                    <!-- Date Filters -->
+                    <group string="">
+                        <group>
+                            <field name="date_from"/>
+                        </group>
+
+                        <group>
+                            <field name="date_to"/>
+                        </group>
+                    </group>
+                <group string="HAMMAD REPORT">
+
+                    <field name="preview_line_ids"
+                        nolabel="1"
+                        readonly="1">
+
+                        <list create="0" edit="0" delete="0">
+
+                            <field name="product"/>
+                            <field name="variant"/>
+                            <field name="customer"/>
+                            <field name="order_date"/>
+                            <field name="qty"/>
+                            <field name="sale_rate"/>
+                            <field name="lot"/>
+
+                        </list>
+
+                    </field>
+
+                </group>        
+                </sheet>
+
+                <footer>
+
+                    <button name="action_print_report"
+                            string="Print PDF"
+                            type="object"
+                            class="btn-primary"/>
+
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+
+                </footer>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id="action_sales_batch_report_wizard" model="ir.actions.act_window">
+
+        <field name="name">Sales Batch Report</field>
+
+        <field name="res_model">sales.batch.report.wizard</field>
+
+        <field name="view_mode">form</field>
+
+        <field name="view_id"
+               ref="view_sales_batch_report_wizard_form"/>
+
+        <field name="target">new</field>
+
+    </record>
+
+
+    <menuitem id="menu_sales_batch_report"
+              name="Sales Batch Report"
+              parent="sale.sale_menu_root"
+              action="action_sales_batch_report_wizard"
+              sequence="100"/>
+
+</odoo>

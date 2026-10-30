@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="action_sales_batch_report" model="ir.actions.report">
+
+        <field name="name">Sales Batch Report</field>
+
+        <field name="model">sales.batch.report.wizard</field>
+
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">sales_batch_report.sales_batch_report_template</field>
+        <field name="report_file">sales_batch_report.sales_batch_report_template</field>
+
+        <field name="print_report_name">'Sales Batch Report'</field>
+
+    </record>
+
+</odoo>
