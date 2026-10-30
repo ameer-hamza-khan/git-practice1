@@ -43,7 +43,12 @@
                         <list create="0" edit="0" delete="0">
 
                             <field name="product"/>
-                            this is very good thing to use 
+                            this is very good thing to use  
+
+                                                        this is very good thing to use  
+
+                            this is very good thing to use  
+
                             <field name="variant"/>
                             <field name="customer"/>
                             <field name="order_date"/>
