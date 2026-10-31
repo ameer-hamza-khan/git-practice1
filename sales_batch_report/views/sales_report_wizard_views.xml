@@ -83,6 +83,12 @@ fhsakhfak
                     <button string="Cancel"
                             special="cancel"
                             class="btn-secondary"/>
+                             <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                             <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
 
                 </footer>
 
