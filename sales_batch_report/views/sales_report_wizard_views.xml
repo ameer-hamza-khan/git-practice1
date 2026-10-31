@@ -16,7 +16,10 @@
                         <group>
                             <field name="product_id"/>
                         </group>
+
 s
+
+
                         <group>
                             <field name="variant_ids"
                                    widget="many2many_tags"
