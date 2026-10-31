@@ -22,8 +22,13 @@ sdfhfdjshjshj  thisis the best thiiiy
                                    widget="many2many_tags"
                                    domain="[('product_tmpl_id', '=', product_id)]"/>
                         </group>
+                         <group>
+                            <field name="variant_ids"
+                                   widget="many2many_tags"
+                                   domain="[('product_tmpl_id', '=', product_id)]"/>
+                        </group>
                     </group>
-
+dfhfdjshjshj  thisis the best thiiiy
                     <!-- Date Filters -->
                     <group string="">
                         <group>
@@ -43,7 +48,12 @@ sdfhfdjshjshj  thisis the best thiiiy
                         <list create="0" edit="0" delete="0">
 
                             <field name="product"/>
-                            this is very good thing to use 
+                            this is very good thing to use  
+
+                                                        this is very good thing to use  
+
+                            this is very good thing to use  
+
                             <field name="variant"/>
                             <field name="customer"/>
                             <field name="order_date"/>
@@ -59,12 +69,16 @@ sdfhfdjshjshj  thisis the best thiiiy
                 </sheet>
 
                 <footer>
+                dfhfdjshjshj  thisis the best thiiiy
+
 
                     <button name="action_print_report"
                             string="Print PDF"
                             type="object"
                             class="btn-primary"/>
-
+                            this is very good thing to use  
+                            this is very good thing to use  
+fhsakhfak
                     <button string="Cancel"
                             special="cancel"
                             class="btn-secondary"/>
@@ -76,6 +90,7 @@ sdfhfdjshjshj  thisis the best thiiiy
         </field>
     </record>
 
+dfhfdjshjshj  thisis the best thiiiy
 
     <record id="action_sales_batch_report_wizard" model="ir.actions.act_window">
 
