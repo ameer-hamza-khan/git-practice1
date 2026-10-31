@@ -16,7 +16,7 @@
                         <group>
                             <field name="product_id"/>
                         </group>
-sdfhfdjshjshj  thisis the best thiiiy
+
                         <group>
                             <field name="variant_ids"
                                    widget="many2many_tags"
@@ -28,7 +28,7 @@ sdfhfdjshjshj  thisis the best thiiiy
                                    domain="[('product_tmpl_id', '=', product_id)]"/>
                         </group>
                     </group>
-
+dfhfdjshjshj  thisis the best thiiiy
                     <!-- Date Filters -->
                     <group string="">
                         <group>
